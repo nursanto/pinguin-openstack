@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: nginx
 spec: 
-  replicas: 3
+  replicas: 1
   template:
     metadata:
       labels:
@@ -15,6 +15,8 @@ spec:
         ports:
         - containerPort: 80
           name: web-port
+
+---
 apiVersion: v1
 kind: Service
 metadata:
